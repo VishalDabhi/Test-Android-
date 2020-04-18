@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Git Test</string>
-    <string name="welcome_text">Welcome to GitHub!! \n\n\n Your Git Connection Success!!</string>
+    <string name="welcome_text">Welcome to GitHub!! \n\n\n Your Git Connection Success!! \n\n Second Commit!!</string>
 </resources>
