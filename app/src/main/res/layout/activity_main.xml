@@ -1,17 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
 
-    <androidx.appcompat.widget.AppCompatTextView
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="@string/welcome_text"
-        android:textSize="30sp"
-        android:textColor="@android:color/black"/>
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@color/colorWhite"
+        android:padding="20dp">
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="@dimen/_20sdp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/str_google_signup"
+            android:layout_marginBottom="@dimen/_20sdp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/colorTextWhite"
+            android:textAllCaps="false"
+            android:text="@string/lbl_signup"
+            android:paddingStart="@dimen/_30sdp"
+            android:paddingEnd="@dimen/_30sdp"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/colorTextWhite"
+            android:textAllCaps="false"
+            android:text="@string/lbl_logout"
+            android:paddingStart="@dimen/_30sdp"
+            android:paddingEnd="@dimen/_30sdp"
+            android:visibility="gone"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Welcome to Google Sign Up"
+                android:textSize="@dimen/_20sdp"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/colorBlack"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/_15sdp"/>
+
+            <RelativeLayout
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginBottom="@dimen/_15sdp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_place_holder_profile"
+                    app:civ_border_color="@color/colorBlack"
+                    app:civ_border_width="@dimen/_1sdp"
+                    android:scaleType="centerCrop"/>
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_centerInParent="true"
+                    android:indeterminateTint="@color/colorPrimary"/>
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="@dimen/_16sdp"
+                android:textColor="@color/colorBlack"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:fontFamily="sans-serif-black"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDisplayName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="@dimen/_16sdp"
+                android:textColor="@color/colorBlack"
+                android:gravity="center"
+                android:fontFamily="sans-serif-medium"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

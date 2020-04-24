@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Git Test</string>
+
     <string name="welcome_text">Welcome to GitHub!! \n\n\n Your Git Connection Success!! \n\n Second Commit!!</string>
+    <string name="str_google_signup">Google Sign up</string>
+    <string name="lbl_signup">Sign Up</string>
+    <string name="lbl_logout">Logout</string>
 </resources>
